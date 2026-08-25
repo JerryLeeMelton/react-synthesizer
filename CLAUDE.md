@@ -4,7 +4,7 @@
 *   React (Next.js compatible)
 *   Web Audio API (Native, no external audio wrappers)
 *   Motion (Framer Motion) for animations
-*   Tailwind CSS for styling
+*   Modern CSS3 (CSS Modules)
 
 ## Architectural Rules
 *   **Client-Side Only:** Web Audio API `AudioContext` cannot run on the server. Ensure all audio engine initialization happens inside `useEffect` or on an explicit user interaction (like a "Power On" button) to comply with browser autoplay policies and Next.js SSR.
@@ -13,8 +13,9 @@
 
 ## UI & Styling Guidelines
 *   The component must be fully self-contained. 
-*   Use Tailwind for a modern, "Apple-like" aesthetic: heavy use of `backdrop-blur`, subtle borders (`border-white/10`), smooth shadows, and rounded corners (`rounded-2xl`).
-*   Wrap interactive controls (knobs, buttons, keys) in Motion components (`motion.div`, `motion.button`) using spring physics (`type: "spring"`) for tactile feedback.
+*   **CSS Requirements:** Do NOT use Tailwind or other utility frameworks. Use pure CSS3 (via CSS Modules like `synth.module.css`). 
+*   **Aesthetic Details:** Achieve an "Apple-like" premium UI using native CSS properties. Utilize `backdrop-filter: blur()` for glassmorphism, `box-shadow` for subtle depth, CSS custom properties (`var(--accent-color)`) for routing indicators, and semantic HTML.
+*   **Animations:** Wrap interactive controls (knobs, buttons, keys) in Motion components (`motion.div`, `motion.button`) using spring physics (`type: "spring"`) for tactile feedback.
 
 ## Routing Logic implementation
 *   Create a clean data structure for the routing state.

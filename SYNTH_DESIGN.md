@@ -24,6 +24,7 @@ The signal path is semi-modular, flowing strictly left-to-right through three st
 
 ## UI / UX Design
 *   **Aesthetic:** Clean, hardware-accelerated rendering, Apple-inspired interface. Use frosted glass effects, high-contrast typography, and smooth, tactile feedback.
+*   **Styling:** Pure modern CSS3 (CSS Modules). Use CSS variables for easy theming of states (active/inactive).
 *   **Animations (Motion):** Spring-physics for button presses, smooth knob rotations, fading LED indicators, and active-voice visualizers.
 *   **Input Handling:** 
     *   Interactive on-screen piano keyboard with active state styling.
